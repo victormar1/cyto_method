@@ -4,10 +4,10 @@
 ## Single-Cell RNA Sequencing Data
 
 ### Mouse Brain Dataset
-Single-cell RNA sequencing (scRNA-seq) data from mouse brain were obtained from [**MISSING: original data source/publication**]. The dataset comprised 597,668 cells across 26,431 genes, spanning six developmental timepoints: embryonic day 18.5 (E18.5), postnatal days 4, 14, and 32 (P4, P14, P32), and 90 weeks (aged adult). Cell type annotations were derived from [**MISSING: annotation source/method**], yielding 31 distinct superclusters including perivascular fibroblasts (PVF/Fibroblast), astrocytes, neurons, oligodendrocytes, microglia, endothelial cells, pericytes, and vascular leptomeningeal cells (VLMC).
+Single-cell RNA sequencing (scRNA-seq) data from mouse brain were obtained from https://www.cell.com/neuron/fulltext/S0896-6273(25)00695-6. The dataset comprised 597,668 cells across 26,431 genes, spanning six developmental timepoints: embryonic day 18.5 (E18.5), postnatal days 4, 14, and 32 (P4, P14, P32), and 90 weeks (aged adult). Cell type annotations were derived from orinal work (https://www.cell.com/neuron/fulltext/S0896-6273(25)00695-6), yielding 31 distinct superclusters including perivascular fibroblasts (PVF/Fibroblast), astrocytes, neurons, oligodendrocytes, microglia, endothelial cells, pericytes, and vascular leptomeningeal cells (VLMC).
 
 ### Marmoset Brain Dataset  
-Comparative scRNA-seq data from common marmoset (*Callithrix jacchus*) brain were obtained from [**MISSING: original data source/publication**]. This dataset included 881,832 cells across 22,582 genes from multiple age stages. Cell type annotation followed [**MISSING: annotation method**], resulting in 10 superclusters with nomenclature adapted to enable cross-species comparison.
+Comparative scRNA-seq data from common marmoset (*Callithrix jacchus*) brain were obtained from (https://www.cell.com/neuron/fulltext/S0896-6273(25)00695-6). This dataset included 881,832 cells across 22,582 genes from multiple age stages. Cell type annotation followed the original paper, resulting in 10 superclusters with nomenclature adapted to enable cross-species comparison.
 
 ## Data Preprocessing
 
@@ -28,7 +28,7 @@ For non-canonical WNT (ncWNT) pathway analysis, a focused gene set comprising *W
 
 ## Cell-Cell Communication Analysis
 
-Ligand-receptor interaction analysis was performed using LIANA (v[**MISSING: version**]), a framework that integrates multiple cell-cell communication inference methods. The `rank_aggregate` function was applied with the following parameters:
+Ligand-receptor interaction analysis was performed using LIANA (last stable build), a framework that integrates multiple cell-cell communication inference methods. The `rank_aggregate` function was applied with the following parameters:
 - **Resource database**: 'consensus' (integrating CellChatDB, CellPhoneDB, and other curated databases)
 - **Expression threshold**: expr_prop = 0.1 (minimum 10% of cells expressing ligand/receptor)
 - **Permutations**: n_perms = 100
@@ -44,7 +44,7 @@ WNT-specific interactions were extracted by filtering for interactions involving
 
 ## Statistical Analysis
 
-Cross-species conservation was assessed by comparing WNT pathway expression rankings and LIANA hub scores between mouse and marmoset datasets. [**MISSING: specific statistical tests if performed**].
+Cross-species conservation was assessed by comparing WNT pathway expression rankings and LIANA hub scores between mouse and marmoset datasets.
 
 ## Software and Code Availability
 
